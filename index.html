@@ -131,6 +131,21 @@
     display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed';font-weight:700;font-size:19px;
   }
   .step h4{font-size:20px;margin-bottom:4px;}
+
+  .outcome-block{margin-top:16px;max-width:720px;}
+  .outcome-block h4{font-size:20px;margin-bottom:8px;}
+  .outcome-block > p{font-size:15px;font-weight:500;margin-bottom:18px;}
+  .outcome-row{display:flex;gap:16px;flex-wrap:wrap;}
+  .outcome-item{
+    flex:1 1 180px;background:#fff;border:1.5px solid var(--ink);border-radius:12px;
+    padding:16px 18px;
+  }
+  .outcome-label{font-family:'Barlow Condensed';font-weight:700;font-size:17px;margin-bottom:6px;}
+  .outcome-item p{font-size:14px;color:#444;margin:0;}
+  .flex-callout{
+    margin-top:24px;max-width:640px;border-left:3px solid var(--amber);padding:4px 0 4px 18px;
+  }
+  .flex-callout p{font-size:15px;font-style:italic;color:#333;margin:0;}
   .step p{font-size:15px;margin:0;font-weight:500;}
 
   /* GRAFISK PROFIL */
@@ -181,13 +196,17 @@
   .phase-tab svg{width:18px;height:18px;flex-shrink:0;}
   .phase-tab.active{background:var(--ink);color:#fff;}
   .card-grid{display:flex;flex-wrap:wrap;gap:18px;}
-  .card{border:1.5px solid var(--ink);border-radius:12px;background:#fff;padding:20px;width:260px;display:none;}
-  .card.visible{display:block;}
+  .card{border:1.5px solid var(--ink);border-radius:12px;background:#fff;padding:20px;width:260px;display:none;flex-direction:column;}
+  .card.visible{display:flex;}
   .card:nth-child(3n+1){transform:rotate(-1deg);}
   .card:nth-child(3n+2){transform:rotate(0.8deg);}
   .card:nth-child(3n){transform:rotate(-0.4deg);}
   .card h4{font-family:'Barlow Condensed';font-weight:700;font-size:19px;margin:0 0 8px;}
   .card p{font-size:14.5px;margin:0;font-weight:500;}
+  .card-dl{
+    margin-top:14px;font-family:'Barlow Condensed';font-weight:700;font-size:14px;
+    color:var(--ink);text-decoration:none;border-top:1px solid var(--line);padding-top:10px;
+  }
 
   .cta-strip{background:var(--ink);color:#fff;padding:60px 40px;}
   .cta-strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:0;}
@@ -263,12 +282,12 @@
 <div class="wrap">
   <div class="kicker">Om modellen</div>
   <h2>Tre prinsipper, én reise</h2>
-  <p class="intro">Vi har jålet ned innovasjon som begrep — i bunn og grunn handler det bare om å jobbe på nye måter. LLP bygger på tjenestedesign, design thinking og lean startup, forenklet til tre prinsipper alle kan bruke uten forkunnskap. Modellen har bevisst plass til flere metoder, slik at den kan justeres og skreddersys til egen organisasjon — og et felles språk dere kan utvikle videre sammen.</p>
+  <p class="intro">Vi har jålet ned innovasjon som begrep — i bunn og grunn handler det bare om å jobbe på nye måter. LLP bygger på tjenestedesign, design thinking og lean startup, forenklet til tre prinsipper alle kan bruke uten forkunnskap. Modellen er et direkte svar på tre behov vi så i egen organisasjon: å senke terskelen for å jobbe på nye måter, å gi rom for å bruke egne erfaringer, metoder og verktøy — og samtidig passe inn i en organisasjon med mye kompleksitet.</p>
 
   <div class="principle-pills reveal">
     <span class="pill">Brukerorientert</span>
     <span class="pill">Eksperimentell</span>
-    <span class="pill">Tverrfaglig</span>
+    <span class="pill">Samarbeid</span>
   </div>
 
   <div class="journey">
@@ -307,23 +326,41 @@
 <div class="wrap">
   <div class="kicker">Kom i gang</div>
   <h2>Slik bruker du LLP i praksis</h2>
-  <p class="intro">Modellen er ikke en fastlåst prosess, men et rammeverk dere fyller med egne øvelser.</p>
+  <p class="intro">Modellen er ikke en fastlåst prosess, men et rammeverk dere fyller med egne øvelser — og formen tilpasses etter behov.</p>
   <div class="steps">
     <div class="step reveal">
       <div class="step-num">1</div>
-      <div><h4>Start med et reelt behov</h4><p>Ta utgangspunkt i en faktisk utfordring — ikke en løsning dere allerede har bestemt.</p></div>
+      <div>
+        <h4>Velg et format som passer</h4>
+        <p>Vi tilpasser oss. Organisasjonen kan bestille en sprint på to dager, et ekspressløp over seks uker, eller andre varianter — avhengig av hvor stort og hastende behovet er.</p>
+      </div>
     </div>
     <div class="step reveal">
       <div class="step-num">2</div>
-      <div><h4>Sett sammen et tverrfaglig lite team</h4><p>Hent inn de som kjenner problemet fra ulike sider.</p></div>
+      <div><h4>Sett sammen et tverrfaglig lite team</h4><p>Hent inn de som kjenner problemet fra ulike sider — samarbeid er ett av de tre prinsippene av en grunn.</p></div>
     </div>
     <div class="step reveal">
       <div class="step-num">3</div>
-      <div><h4>Gå gjennom Lære, Lage, Prøve</h4><p>Bruk kortstokken og malene til å strukturere arbeidet.</p></div>
+      <div><h4>Beveg dere gjennom Lære, Lage, Prøve</h4><p>Ikke nødvendigvis i rekkefølge. Det er en løkke, ikke en rett linje — helt normalt å hoppe tilbake til Lære midt i en runde.</p></div>
     </div>
-    <div class="step reveal">
-      <div class="step-num">4</div>
-      <div><h4>La det dere lærer styre neste runde</h4><p>LLP er en løkke — det er normalt å gå tilbake til Lære etter en test.</p></div>
+  </div>
+
+  <div class="outcome-block reveal">
+    <h4>Etter runden: læring → beslutning</h4>
+    <p>Når dere har vært gjennom Lære, Lage og Prøve minst én gang, sitter dere igjen med en beslutning:</p>
+    <div class="outcome-row">
+      <div class="outcome-item">
+        <div class="outcome-label">Justere / gjenta</div>
+        <p>Gå en ny runde i løkken med det dere nettopp lærte.</p>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-label">Pilotering / drift</div>
+        <p>Klar for å teste i større skala — se egen veiledning for pilotering.</p>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-label">Kassere</div>
+        <p>Løsningen løser ikke problemet. Det er også et gyldig utfall.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -357,18 +394,26 @@
     </button>
   </div>
   <div class="card-grid" id="cardGrid">
-    <div class="card visible" data-tab="laere"><h4>Behovskartlegging</h4><p>Enkel samtaleguide for å avdekke det reelle behovet.</p></div>
-    <div class="card visible" data-tab="laere"><h4>En dag i livet</h4><p>Kartlegg en brukers hverdag steg for steg.</p></div>
-    <div class="card visible" data-tab="laere"><h4>Antakelseskortet</h4><p>Skriv ned hva dere tror er sant om problemet.</p></div>
-    <div class="card" data-tab="lage"><h4>Papirprototype på 20 min</h4><p>Bygg det enklest mulige konseptet.</p></div>
-    <div class="card" data-tab="lage"><h4>Tjenestereisen</h4><p>Tegn opp stegene i tjenesten fra brukerens ståsted.</p></div>
-    <div class="card" data-tab="lage"><h4>Minste testbare versjon</h4><p>Definer den minste versjonen som kan testes.</p></div>
-    <div class="card" data-tab="prove"><h4>Testplan på én side</h4><p>Hvem tester, hva ser dere etter?</p></div>
-    <div class="card" data-tab="prove"><h4>Læringslogg</h4><p>Samle det dere lærte etter en test.</p></div>
-    <div class="card" data-tab="prove"><h4>Gå videre / gå tilbake</h4><p>Enkel beslutningsmodell for neste steg.</p></div>
-    <div class="card" data-tab="fasilitering"><h4>Sjekk-inn-runde</h4><p>Kort runde for å få alle til stede før dere starter.</p></div>
-    <div class="card" data-tab="fasilitering"><h4>Energiøvelse</h4><p>Løft tempoet i rommet når fokuset synker.</p></div>
-    <div class="card" data-tab="fasilitering"><h4>Rolleavklaring</h4><p>Bli enige om hvem som gjør hva i økten før dere starter.</p></div>
+    <div class="card visible" data-tab="laere"><h4>Persona</h4><p>Sett ord på hvem løsningen faktisk er til, basert på ekte kjennetegn og behov — ikke antakelser.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card visible" data-tab="laere"><h4>Brukerreise</h4><p>Kartlegg stegene brukeren går gjennom, og finn hvor det butter.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card visible" data-tab="laere"><h4>Brukerhistorie</h4><p>Beskriv behovet kort: hvem, hva de trenger, og hvorfor.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card visible" data-tab="laere"><h4>Pakke ut og skape innsikt</h4><p>Bearbeid det dere har hørt og sett sammen, og finn de reelle innsiktene.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card visible" data-tab="laere"><h4>Dot voting</h4><p>Prioriter raskt blant mange innspill ved å stemme med klistremerker.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="lage"><h4>Gæren åtter</h4><p>Åtte raske idéskisser på åtte minutter — bryt ut av det første, opplagte svaret.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="lage"><h4>Løsningsskissemal</h4><p>Tegn opp konseptet konkret nok til at andre forstår det uten en muntlig forklaring.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="lage"><h4>Prototype (også med KI)</h4><p>Bygg en enkel versjon av løsningen — inkludert med KI-verktøy som snarvei.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="lage"><h4>Dot voting</h4><p>Prioriter mellom flere konsepter før dere går videre til testing.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="prove"><h4>Brukercase eller scenario</h4><p>Sett løsningen inn i en konkret, gjenkjennelig situasjon før dere tester.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="prove"><h4>Brukertesting</h4><p>La ekte brukere prøve løsningen, og se hvor den holder og hvor den ikke gjør det.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="prove"><h4>Feedback-mal</h4><p>Strukturer tilbakemeldingene dere samler inn, så de er lette å sammenligne.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="fasilitering"><h4>Sammen alene</h4><p>La alle tenke individuelt først, før dere deler — unngår at de høyeste stemmene styrer.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="fasilitering"><h4>IGP (individuell, gruppe, plenum)</h4><p>Strukturer økten i tre steg for bredere involvering og bedre diskusjoner.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="fasilitering"><h4>Båtøvelse</h4><p>Kartlegg hva som driver dere fremover og hva som holder dere tilbake.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="fasilitering"><h4>Skriv/tegn på tavla</h4><p>Gjør tanker synlige og delte i rommet i stedet for å bli værende hos én person.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="fasilitering"><h4>Dot voting</h4><p>Rask, synlig prioritering når gruppa må bli enige om retning.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="fasilitering"><h4>Stram tid = bedre output</h4><p>Sett en kort, tydelig tidsramme — det skjerper fokuset mer enn det stresser.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="fasilitering"><h4>Parkeringsplass</h4><p>Noter viktige sidespor synlig, så dere kan holde fremdrift uten å miste dem.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
+    <div class="card" data-tab="fasilitering"><h4>Matrise</h4><p>Plasser idéer eller tiltak i et koordinatsystem for å prioritere sammen.</p><a class="card-dl" href="#">Last ned mal ↓</a></div>
   </div>
   </div>
 </section>
