@@ -1,0 +1,7 @@
+Malene i denne mappen er komprimerte kopier av originalene (bilder nedskalert),
+med PDF-eksport av hver. Oppdater originalen, eksporter PDF og erstatt filen her
+med samme filnavn - da trenger ikke index.html endres.
+
+Kortene på siden ligger i TOOLS-listen nederst i index.html.
+status: 'klar' = fra kortstokken, 'utkast' = nytt og ikke testet.
+file: filnavn i maler/ uten endelse.
